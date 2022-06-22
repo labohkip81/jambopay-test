@@ -37,3 +37,6 @@ boto3==1.23.5
 
 #Add drf yasg
 drf-yasg==1.20.0
+
+#Django simple history
+django-simple-history==3.1.1

@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 
 STOCK_STATUSES = (
     ("Good", "Good"),
@@ -15,10 +16,10 @@ class Author(models.Model):
     date_of_birth = models.DateField(auto_now=False, auto_now_add=False)
     created_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    
+
     class Meta:
-        ordering = ['-created_date']
-    
+        ordering = ["-created_date"]
+
     def __str__(self):
         return self.first_name + " " + self.last_name
 
@@ -30,10 +31,10 @@ class Book(models.Model):
     description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    
+
     class Meta:
-        ordering = ['-created_date']
-        
+        ordering = ["-created_date"]
+
     def __str__(self):
         return self.title
 
@@ -46,6 +47,7 @@ class Stock(models.Model):
     )
     created_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    history = HistoricalRecords()
 
     # Assign status on save based on number of books
     def save(self, *args, **kwargs):
@@ -58,9 +60,9 @@ class Stock(models.Model):
         else:
             self.status = "Out of Stock"
         super().save(*args, **kwargs)
-    
+
     class Meta:
-        ordering = ['-created_date']
-        
+        ordering = ["-created_date"]
+
     def __str__(self):
         return self.book.title

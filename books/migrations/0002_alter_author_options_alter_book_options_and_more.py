@@ -6,20 +6,20 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('books', '0001_initial'),
+        ("books", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='author',
-            options={'ordering': ['-created_date']},
+            name="author",
+            options={"ordering": ["-created_date"]},
         ),
         migrations.AlterModelOptions(
-            name='book',
-            options={'ordering': ['-created_date']},
+            name="book",
+            options={"ordering": ["-created_date"]},
         ),
         migrations.AlterModelOptions(
-            name='stock',
-            options={'ordering': ['-created_date']},
+            name="stock",
+            options={"ordering": ["-created_date"]},
         ),
     ]

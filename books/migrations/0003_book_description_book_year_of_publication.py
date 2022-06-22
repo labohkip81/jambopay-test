@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('books', '0002_alter_author_options_alter_book_options_and_more'),
+        ("books", "0002_alter_author_options_alter_book_options_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='book',
-            name='description',
+            model_name="book",
+            name="description",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='book',
-            name='year_of_publication',
+            model_name="book",
+            name="year_of_publication",
             field=models.PositiveIntegerField(default=2022),
         ),
     ]

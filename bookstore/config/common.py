@@ -20,7 +20,8 @@ class Common(Configuration):
         "rest_framework",  # utilities for rest apis
         "rest_framework.authtoken",  # token authentication
         "django_filters",  # for filtering rest endpoints
-        'drf_yasg', # for documentation
+        "drf_yasg",  # for api documentation
+        "simple_history",  # add model history
         # Your apps
         "bookstore.users",
         "books.apps.BooksConfig",
@@ -35,6 +36,7 @@ class Common(Configuration):
         "django.contrib.auth.middleware.AuthenticationMiddleware",
         "django.contrib.messages.middleware.MessageMiddleware",
         "django.middleware.clickjacking.XFrameOptionsMiddleware",
+        "simple_history.middleware.HistoryRequestMiddleware",
     )
 
     ALLOWED_HOSTS = ["*"]
