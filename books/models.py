@@ -26,6 +26,8 @@ class Author(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    year_of_publication = models.PositiveIntegerField(default=2022)
+    description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     
