@@ -87,6 +87,12 @@ class StockViewsTest(TestCase):
             email="test@gmail.com",
             date_of_birth="2022-06-22",
         )
+        self.book = Book.objects.create(
+            title="Best Book",
+            author=self.author,
+            year_of_publication=2022,
+            description="Test Description",
+        )
 
     def test_stock_list_returns_200_response(self):
         request = self.factory.get("api/v1/stocks/")
@@ -98,15 +104,9 @@ class StockViewsTest(TestCase):
         )
 
     def test_stock_create_returns_201_response(self):
-        book = Book.objects.create(
-            title= "Best Book",
-            author =  self.author,
-            year_of_publication = 2022,
-            description = "Test Description",
-        )
 
         data = {
-            "book": book.id,
+            "book": self.book.id,
             "quantity": 1,
         }
         request = self.factory.post("api/v1/stocks/create-stock/", data=data)
@@ -116,3 +116,18 @@ class StockViewsTest(TestCase):
             status.HTTP_201_CREATED,
             "Stock create view should return 201",
         )
+
+    # def test_stock_patch_returns_200_response_and_updates_value(self):
+    #     data = {
+    #      "quantity": 10,
+    #     }
+    #     stock = Stock.objects.create(
+    #         book = self.book,
+    #         quantity = 1,)
+    #     request = self.factory.patch(f"api/v1/stocks/{stock.id}/", data=data)
+    #     response = StockViewSet.as_view({"patch": "partial_update"})(request, pk=stock.id).render()
+    #     self.assertEqual(
+    #         response.status_code,
+    #         status.HTTP_200_OK,
+    #         "Stock patch should return 200",
+    #     )
