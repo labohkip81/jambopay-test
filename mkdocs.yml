@@ -1,0 +1,12 @@
+site_name: bookstore
+site_description: Jambopay Interview Project
+repo_url: https://github.com/labohkip81/jambopay-test
+site_dir: site
+copyright: Copyright &copy; 2020, <a href="https://github.com/labohkip81">labohkip81</a>.
+dev_addr: 0.0.0.0:8001
+
+nav:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'
