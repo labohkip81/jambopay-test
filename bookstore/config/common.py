@@ -24,6 +24,7 @@ class Common(Configuration):
 
         # Your apps
         'bookstore.users',
+        'books.apps.BooksConfig'
 
     )
 
