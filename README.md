@@ -1,8 +1,5 @@
 # jambopay-test
 
-[![Build Status](https://travis-ci.org/labohkip81/jambopay-test.svg?branch=master)](https://travis-ci.org/labohkip81/jambopay-test)
-[![Built with](https://img.shields.io/badge/Built_with-Cookiecutter_Django_Rest-F7B633.svg)](https://github.com/agconti/cookiecutter-django-rest)
-
 Jambopay Interview Project. Check out the project's [documentation](http://labohkip81.github.io/jambopay-test/).
 
 # Prerequisites
@@ -21,3 +18,11 @@ Run a command inside the docker container:
 ```bash
 docker-compose run --rm web [command]
 ```
+
+To interact with the apis via swagger-ui:
+
+  [http://74.207.232.253:8000/swagger/](http://74.207.232.253:8000/swagger/)
+
+Locally, you can also use the swagger-ui to interact with the apis after you have started the dev server via docker-compose:
+  [http://0.0.0.0:8000/swagger/](http://0.0.0.0:8000/swagger/)
+
