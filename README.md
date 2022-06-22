@@ -1,6 +1,6 @@
 # jambopay-test
 
-Jambopay Interview Project. Check out the project's [documentation](http://labohkip81.github.io/jambopay-test/).
+Jambopay Interview Project
 
 # Prerequisites
 
@@ -26,3 +26,8 @@ To interact with the apis via swagger-ui:
 Locally, you can also use the swagger-ui to interact with the apis after you have started the dev server via docker-compose:
   [http://0.0.0.0:8000/swagger/](http://0.0.0.0:8000/swagger/)
 
+To run the tests via docker
+
+```bash
+docker-compose run --rm web python3 manage.py test books
+```
