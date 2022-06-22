@@ -1,0 +1,14 @@
+[
+  {
+    "model": "books.author",
+    "pk": 1,
+    "fields": {
+      "first_name": "Laban",
+      "last_name": "Kiplagat",
+      "email": "labankiplagat81@gmail.com",
+      "date_of_birth": "2020-03-04",
+      "created_date": "2022-06-22T07:42:51.652Z",
+      "updated": "2022-06-22T07:42:51.652Z"
+    }
+  }
+]

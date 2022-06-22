@@ -1,0 +1,24 @@
+[
+  {
+    "model": "books.stock",
+    "pk": 1,
+    "fields": {
+      "book": 1,
+      "quantity": 5,
+      "status": "Bad",
+      "created_date": "2022-06-22T07:46:04.467Z",
+      "updated": "2022-06-22T09:00:29.982Z"
+    }
+  },
+  {
+    "model": "books.stock",
+    "pk": 2,
+    "fields": {
+      "book": 2,
+      "quantity": 1,
+      "status": "Critical",
+      "created_date": "2022-06-22T09:02:24.768Z",
+      "updated": "2022-06-22T09:02:24.768Z"
+    }
+  }
+]

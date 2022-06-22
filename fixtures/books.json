@@ -1,0 +1,38 @@
+[
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "title": "Best Book",
+      "author": 1,
+      "year_of_publication": 2022,
+      "description": null,
+      "created_date": "2022-06-22T07:45:24.467Z",
+      "updated": "2022-06-22T07:45:24.468Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "title": "Test Book",
+      "author": 1,
+      "year_of_publication": 2022,
+      "description": null,
+      "created_date": "2022-06-22T08:35:48.938Z",
+      "updated": "2022-06-22T08:35:48.938Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "title": "Change Is Coming Book",
+      "author": 1,
+      "year_of_publication": 2020,
+      "description": "Sample Description for the book",
+      "created_date": "2022-06-22T09:02:01.951Z",
+      "updated": "2022-06-22T09:02:01.951Z"
+    }
+  }
+]

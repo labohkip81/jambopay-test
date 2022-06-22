@@ -27,8 +27,8 @@ from books.views import BookViewSet, AuthorViewSet, StockViewSet, CreateStockVie
 router = DefaultRouter()
 router.register(r"books", BookViewSet)
 router.register(r"authors", AuthorViewSet)
-router.register(r"stocks", StockViewSet)
 router.register(r"stocks/create-stock", CreateStockViewSet)
+router.register(r"stocks", StockViewSet)
 
 urlpatterns = [
     re_path(

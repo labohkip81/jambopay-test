@@ -5,10 +5,11 @@ import dj_database_url
 from configurations import Configuration
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = os.path.dirname(BASE_DIR)
 
 
 class Common(Configuration):
-
+    print(ROOT_DIR)
     INSTALLED_APPS = (
         "django.contrib.admin",
         "django.contrib.auth",
