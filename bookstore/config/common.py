@@ -20,6 +20,7 @@ class Common(Configuration):
         "rest_framework",  # utilities for rest apis
         "rest_framework.authtoken",  # token authentication
         "django_filters",  # for filtering rest endpoints
+        'drf_yasg', # for documentation
         # Your apps
         "bookstore.users",
         "books.apps.BooksConfig",
