@@ -15,6 +15,12 @@ class Author(models.Model):
     date_of_birth = models.DateField(auto_now=False, auto_now_add=False)
     created_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_date']
+    
+    def __str__(self):
+        return self.first_name + " " + self.last_name
 
 
 class Book(models.Model):
@@ -22,6 +28,12 @@ class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-created_date']
+        
+    def __str__(self):
+        return self.title
 
 
 class Stock(models.Model):
@@ -44,3 +56,9 @@ class Stock(models.Model):
         else:
             self.status = "Out of Stock"
         super().save(*args, **kwargs)
+    
+    class Meta:
+        ordering = ['-created_date']
+        
+    def __str__(self):
+        return self.book.title
